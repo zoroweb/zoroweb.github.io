@@ -1,0 +1,470 @@
+/*reseteo propiedades*/
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/****** NAV ************************************************************************************************/
+
+nav {
+    background-color: black;
+    width: 99.2vw;
+    position:-webkit-sticky;
+    top: 0%;
+    overflow: hidden;
+    height: 300px;
+    
+}
+
+.box_container_nav{
+    width: 100vw;
+    display: flex;
+}
+
+.logo{
+    width: 150px;
+    padding-top: 5px;
+}
+
+input{
+    width: 30vw;
+    height: 30px;
+    margin: auto;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+.barra_busqueda{
+
+
+    font-size: large;
+    padding-left: 3px; 
+
+}
+.ico_nav{
+    width: 100px;
+    padding-right: 15px;
+}
+
+.nav_lista_navegacion{
+   background-color: rgb(37, 37, 37);
+   width: 99.15vw;
+   height: 110px;
+   padding-top: 40px;
+   
+}
+
+.menu {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+    width: 99vw;
+    
+}
+.menu ul {
+    list-style: none;
+}
+
+.menu a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding-left: 20px;
+    
+}
+
+
+.menu  li{
+    position: relative;
+    float: left;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a{
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 20px;
+    display: block;
+    color: rgb(255, 255, 255);
+}
+
+.menu li a:hover{
+    animation-name: lista;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lista {
+    0%{
+        background-color: rgb(181, 173, 173);;
+    }
+
+    100%{
+      background-color: rgba(181, 173, 173, 0.436);;
+    }
+}
+
+.menu li{
+    display: inline-block;
+}
+
+
+/*CAMBIOS NUEVOS DE MENU DESPLEGABLE*/
+
+/* menu desplegable */
+
+.menu ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background-color:rgb(73, 72, 72);
+    padding:0;
+   }
+   
+   /* items del menu desplegable */
+   
+   ul ul li {
+
+    float:none;
+    width:150px;
+    
+   }
+
+.menu  .desplegable{
+    background-color: rgb(77, 77, 77);
+   }
+   /* enlaces de los items del menu desplegable */
+   
+    ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+ .menu li:hover > ul {
+    
+    
+    z-index: 18;
+    display: block;
+    background:rgb(73, 72, 72);
+    
+   }
+
+
+/************ MENU RESPONSIVE ANDROID***************************/
+.checkbtn{
+    font-size: 30px;
+    color:  white;
+    float: right;
+    line-height: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{ /*CAJA DEL CHECK*/
+    display: none;
+}
+
+/**** TABLET ***/
+@media (max-width: 952px) {
+    .logo{
+        padding-left: 20px;
+        
+    }
+    .menu li a {
+        font-size: 16px;
+    };
+}
+/*** MOVIL ***/
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .nav_lista_navegacion{
+        text-align: center;
+        padding: 0;
+        height: 40px;
+    }
+    .nav_lista_navegacion .menu{
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background: rgb(37, 37, 37);
+        top: 80px;
+        left:100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+     .menu li {
+        
+        display: block;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+        margin-top: 0px;
+        height: 100px;
+        background-color: rgb(37, 37, 37);
+        
+    }
+    
+    .menu li a{
+        padding-top: 40px;
+    }
+    
+    .nav_lista_navegacion .menu li a{
+        font-size: 20px;
+        padding: 25px;
+        
+    }
+    .menu li a:hover, li a.active{
+        background: none;
+        
+    }
+
+
+    #check:checked ~ .nav_lista_navegacion .menu{
+        left: 70%;
+    }
+
+    /* DESPLEGABLE MOVIL*/
+    
+    .menu ul {
+        
+        display:none;
+        position:absolute;
+        top:100%;
+        left:100%;
+        background-color:rgb(72, 72, 72);
+        padding:0;          
+       }
+    
+    
+
+
+    .menu li:hover > ul li {
+                               
+        z-index: 18;
+        display: block;
+        background:rgb(49, 49, 49);
+        height:auto;                                                                 
+       }
+
+    .menu li:hover > ul li a{
+        padding: 25px;
+    }
+    .menu li:hover > ul{
+        width: 100%;
+        left: -100%;
+        transition: all 5s;
+    }
+
+    
+    /*Cambio de posicion del apartado*/
+
+    .menu li:hover{
+    }
+
+}
+  
+   
+
+
+
+/***** HEADER *******************************************************************************************************************************************************************/
+
+header {
+    
+    margin-top: 0px;
+    width: 100%;
+    background-color: black;
+    
+   
+}
+
+h1 {
+    color: rgb(176, 176, 176);
+    font-size: 69px;
+    text-shadow: rgb(10 189 240 / 30%) 3px 3px 0px, rgb(254 1 1 / 30%) -3px -3px 0px;
+    text-align: center;
+    padding-top: 65px;
+}
+
+.txt_header {
+    color: rgb(176, 176, 176);
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    padding: 55px;
+    
+}
+
+/******* PROPIEDADES BODY *******/
+
+body{
+    background-color: black;
+}
+
+/***** MAIN *****************************************************************************************************************************************************************/
+
+
+main{
+    margin-top: 5vw;
+    background-color: white;
+    overflow: hidden;
+}
+.contenedor_titulo_ms {
+    background-color: rgb(37, 37, 37);
+    width: 99.2vw;
+}
+
+
+.titulo_secciones {
+    color: white;
+    font-size: 65px;
+    text-align: center;
+    padding: 35px;
+    font-family: sans-serif;
+}
+ .categorias{
+    width: 99vw;
+    display: flex;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+section  h3{
+    width: 25%;
+    text-align: center;
+    padding-bottom: 5px;
+    
+}
+
+.contenedor_imagenes {
+   
+    width: 99.24vw;
+    display: flex;
+}
+.productos{
+
+    height: fit-content;
+    color: black;
+    text-decoration: none;
+
+}
+
+.productos > p{
+
+    margin-bottom: 10px;
+
+}
+.img_section {
+    width: 23vw;
+    height: 300px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+
+
+.imagenes {
+    padding: 0.83vw;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: 1px solid black;
+}
+
+.negro {
+
+    background-color: rgb(37, 37, 37);
+    width: 99.2vw;
+    height: 150px;
+}
+
+/********* MOVIL **********/
+
+@media(max-width: 858px){
+
+    .contenedor_imagenes{
+        width: 99vw;
+    }
+    
+    .contenedor_titulo_ms{
+        width: 100vw;
+    }
+
+    .categorias{
+
+        width: 99vw;
+        font-size: 22px;
+    }
+
+
+}
+
+
+/********* TABLET *******/
+@media (max-width: 1280px){
+
+
+    .contenedor_imagenes{
+        width: 100%;
+    }
+
+    .contenedor_titulo_ms{
+
+        width: 100vw;
+        
+
+    }
+
+
+}
+
+
+
+    /***** FOOTER *********************************************************************************************************************************************************/
+
+footer{
+    background: linear-gradient(180deg, rgb(105, 102, 102), black);
+    width: 100%;
+    display: flex;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.ico_redes{
+    width: 30px;
+    margin-left: 45px;
+}
+
+.box_footer{
+    color: white;
+    width: 99.25vw;
+    padding: 50px;
+    line-height:35px;
+}
+
+
+
+a{
+    color: white;
+}
+
+
+         
