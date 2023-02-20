@@ -236,7 +236,10 @@ input{
         background: none;
         
     }
-
+ /* cAMBIO FGUAP*/
+ .menu{
+    background-color: blue;
+ }
 
     #check:checked ~ .nav_lista_navegacion .menu{
         left: 70%;
